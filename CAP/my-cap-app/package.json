@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cds watch"
   },
   "keywords": [],
   "author": "",
@@ -22,25 +23,31 @@
     "eslint": "^9.27.0"
   },
   "sapux": [
-  "app/admin-books",
-  "app/browse",
-  "app/externalitems"
-]
-,
+    "appadmin-books",
+    "appbrowse",
+    "app/admin-books",
+    "app/browse",
+    "app/externalitems"
+  ],
   "cds": {
-  "requires": {
-    "auth": {
-      "kind": "mocked"
-    }
-  },
-  "folders": {
-    "app": "app"
-  },
-  "cds": {
-  "serve": {
-    "externalitems": {
-      "kind": "fiori",
-      "model": "srv/ExternalDataService"
+    "requires": {
+      "auth": {
+        "kind": "mocked"
+      }
+    },
+    "folders": {
+      "app": "app"
+    },
+    "fiori": {
+      "launchpad": {
+        "config": "appconfig/fioriLaunchpad.html"
+      },
+      "serve": {
+        "externalitems": {
+          "kind": "fiori",
+          "model": "srv/ExternalDataService"
+        }
+      }
     }
   }
-}}}
+}

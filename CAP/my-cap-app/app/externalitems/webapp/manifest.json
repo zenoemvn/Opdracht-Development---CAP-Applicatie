@@ -1,6 +1,6 @@
 {
   "sap.app": {
-    "id": "externalitems",
+    "id": "my-cap-app.externalitems",
     "type": "application",
     "title": "External Items",
     "dataSources": {
@@ -27,34 +27,32 @@
         "sap.ui.core": {}
       }
     },
-    
-  "rootView": {
-    "viewName": "sap.fe.templates.RootContainer",
-    "type": "XML",
-    "id": "app"
-  },
+    "rootView": {
+      "viewName": "sap.fe.templates.RootContainer",
+      "type": "XML",
+      "id": "app"
+    },
     "routing": {
-  "targets": {
-    "ExternalItems": {
-      "type": "Component",
-      "id": "ExternalItems",
-      "name": "sap.fe.templates.ListReport",
-      "options": {
-        "settings": {
-          "entitySet": "ExternalItems",
-          "variantManagement": "Page",
-          "navigation": {}
+      "targets": {
+        "ExternalItems": {
+          "type": "Component",
+          "id": "ExternalItems",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "entitySet": "ExternalItems",
+              "variantManagement": "Page",
+              "navigation": {}
+            }
+          }
         }
-      }
-    }
-  },
-  "routes": [
-    {
-      "pattern": "",
-      "target": "ExternalItems"
-    }
-  ]
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "target": "ExternalItems"
+        }
+      ]
     }
   }
 }
-  

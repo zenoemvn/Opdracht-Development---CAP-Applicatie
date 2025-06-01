@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fiori Launchpad Sandbox</title>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://ui5.sap.com/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_fiori_3"
+      data-sap-ui-libs="sap.m, sap.ushell"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-xx-bindingSyntax="complex"
+      data-sap-ui-onInit="module:sap/ushell/bootstrap/sandbox"
+      data-sap-ui-resourceroots='{
+        "sap.ushell.demo": "./"
+      }'
+    ></script>
+    <script>
+      sap.ushell.bootstrap("demo").then(function () {
+        sap.ushell.render("content");
+      });
+    </script>
+  </head>
+  <body class="sapUiBody" id="content"></body>
+</html>
