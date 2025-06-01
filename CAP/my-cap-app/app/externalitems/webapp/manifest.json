@@ -1,0 +1,60 @@
+{
+  "sap.app": {
+    "id": "externalitems",
+    "type": "application",
+    "title": "External Items",
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/external-data/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5"
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "libs": {
+        "sap.fe.templates": {},
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    
+  "rootView": {
+    "viewName": "sap.fe.templates.RootContainer",
+    "type": "XML",
+    "id": "app"
+  },
+    "routing": {
+  "targets": {
+    "ExternalItems": {
+      "type": "Component",
+      "id": "ExternalItems",
+      "name": "sap.fe.templates.ListReport",
+      "options": {
+        "settings": {
+          "entitySet": "ExternalItems",
+          "variantManagement": "Page",
+          "navigation": {}
+        }
+      }
+    }
+  },
+  "routes": [
+    {
+      "pattern": "",
+      "target": "ExternalItems"
+    }
+  ]
+    }
+  }
+}
+  
